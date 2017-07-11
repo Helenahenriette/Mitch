@@ -11,18 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :artist %>
-    <%= form.text_field :artist, id: :song_artist %>
+  <div class="form-group" style="max-width: 400px">
+    <h5>artist</h5>
+    <%= form.text_field :artist, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :song_title %>
+  <div class="form-group" style="max-width:400px">
+    <h5>title</h5>
+    <%= form.text_field :title, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
-    <%= form.label :genre %>
+  <div class="form-group" style="max-width: 400px">
+    <h5>genre</h5>
     <%= form.select :genre, [
                             ["pop", "pop"],
                             ["hip hop", "hip hop"],
@@ -32,12 +32,12 @@
                             ], prompt: "select genre...", id: :song_genre %>
   </div>
 
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link, id: :song_link %>
+  <div class="form-group" style="max-width: 400px">
+    <h5>Youtube ID (example: ztIEogFr9j4)</h5>
+    <%= form.text_field :link, class: "form-control input-lg" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+   <div class="form-group">
+    <%= form.submit 'Post Song', class: "btn btn-primary btn-lg" %>
   </div>
 <% end %>
