@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Song</h1>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @song.artist %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @song.title %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @song.genre %>
+</p>
+
+<p>
+  <strong>Video:</strong><br>
+  
+  <iframe width="854" height="480" src="https://www.youtube.com/embed/<%= @song.link %>" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
