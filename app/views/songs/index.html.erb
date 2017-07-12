@@ -2,7 +2,9 @@
 
 <h1>Mitch</h1>
 
-<div class="list-group">
+<h4>post and share your favorite music!</h4>
+<br>
+<div class="list-group" style="max-width: 600px">
   <% @songs.each do |song| %>
     <%= link_to "#{song.title} - #{song.artist}", song, class: "list-group-item" %>
   <% end %>
